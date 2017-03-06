@@ -1,0 +1,11 @@
+# from MacOSX
+.DS_Store
+
+# Emacs backup files
+*~
+
+# Vim
+.*.swp
+
+# archive file
+libspatialsim-docker.tar.gz  
