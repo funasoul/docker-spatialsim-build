@@ -17,7 +17,8 @@ cd ~/git/docker-spatialsim-build/
 #### How to use
 Following command will build `spatialsimulator` and `libspatialsim` on docker, and then create an archive file as `libspatialsim-docker.tar.gz`.
 ```sh
-docker run funasoul/spatialsim-build    # build libspatialsim on docker
+docker build -t funasoul/spatialsim-build .     # build libspatialsim on docker
+docker run funasoul/spatialsim-build
 mycontainer=$(docker ps -aqlf "ancestor=funasoul/spatialsim-build")  # just obtain last container ID
 docker cp ${mycontainer}:/tmp/deploy/libspatialsim-docker.tar.gz .   # use obtained container ID to copy the archive file to the host.
 tar tvzf libspatialsim-docker.tar.gz    # just for check
